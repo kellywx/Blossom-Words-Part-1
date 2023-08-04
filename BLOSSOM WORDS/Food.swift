@@ -16,14 +16,13 @@ struct Food: View {
             Text("Food")
                 .font(.system(size: 40))
                 .fontWeight(.bold)
-                .padding(.trailing, 300)
                 .padding(.top)
-                .padding(.leading, 2)
+                .padding(.leading, 20)
             Text("Here are your 5 words for today:")
                 .font(.title)
                 .fontWeight(.regular)
-                .padding(.leading, 2)
-                .padding(.top, 1)
+                .multilineTextAlignment(.center)
+                .padding(.leading, 16)
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack {
                     Image("APPLE")

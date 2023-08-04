@@ -12,16 +12,30 @@ struct MakeSentence: View {
         @State var Answer: String = ""
         @State var ShowButton: Bool = false
         @State var TextFieldVal: Bool = false
+    var textColor: Color {
+       if TextFieldVal == true {
+           return Color("GREEN")
+       } else {
+          return .red
+       }
+    }
     var body: some View {
         VStack{
             Text("Make a sentence with 苹果")
                 .font(.system(size: 40))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 50)
+                .padding()
+                .fixedSize(horizontal: false, vertical: true)
             
             //TEXTFIELD
             Text(Answer)
+                .font(.system(size: 20))
+                .foregroundColor(self.textColor)
+                .padding()
+                .fixedSize(horizontal: false, vertical: true)
+            
+            
             TextField("Type here...", text: $Textfield)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard){}
@@ -36,6 +50,7 @@ struct MakeSentence: View {
                             if TextFieldVal == true {
                                 ShowButton = true
                                 Answer = "This sentence is correct!"
+                                
                             } else {
                                 Answer = "苹果 means apple. This is not a correct sentence. Try again!"
                             }

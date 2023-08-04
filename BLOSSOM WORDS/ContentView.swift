@@ -28,39 +28,44 @@ struct ContentView: View {
             Button(action: {
                 print("Floating Button Click")
             }, label: {
-                NavigationLink(destination: Food()) {
-                     Text("Food")
-                        .font(.system(size: 35))
-                        .padding(.horizontal, 37)
-                        .padding(.bottom, 150)
-                        .padding(.top, 10)
-    
-                 }
+                VStack {
+                    NavigationLink(destination: Food()) {
+                         Text("Food")
+                            .font(.system(size: 35))
+                              
+                    }
+                    Image("PIZZA")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 100)
+                    .padding(.bottom, 15)
+                    
+                }
+                
             })
-    
                 .font(.title)
-                .padding(.top, 30)
-                .padding(.trailing, 20)
                 .tint(Color("PINK"))
                     .buttonStyle(.borderedProminent)
-                    .multilineTextAlignment(.center)
                     .foregroundColor(Color.black)
             
             Button(action: {
                 print("Floating Button Click")
             }, label: {
-                NavigationLink(destination: Food()) {
-                     Text("Sports")
-                        .font(.system(size: 32))
-                        .padding(.horizontal, 36)
-                        .padding(.bottom, 150)
-                        .padding(.top, 10)
-    
-                 }
+                VStack{ NavigationLink(destination: Food()) {
+                    Text("Sports")
+                       .font(.system(size: 32))
+
+   
+                }
+               Image("BALL")
+                   .resizable(resizingMode: .stretch)
+                   .aspectRatio(contentMode: .fit)
+               .frame(width: 150, height: 100)
+               .padding(.bottom, 20)}
+               
             })
-    
+                .padding(.leading)
                 .font(.title)
-                .padding(.top, 30)
                 .tint(Color("PINK"))
                     .buttonStyle(.borderedProminent)
                     .multilineTextAlignment(.center)
@@ -68,43 +73,50 @@ struct ContentView: View {
                     
     
             }
+        .padding(.top, 20)
+            
             HStack{
                 Button(action: {
                     print("Floating Button Click")
                 }, label: {
-                    NavigationLink(destination: Food()) {
-                         Text("Nature")
-                            .font(.system(size: 29))
-                            .padding(.horizontal, 35)
-                            .padding(.bottom, 150)
-                            .padding(.top, 10)
-        
-                     }
+                    VStack {
+                        NavigationLink(destination: Food()) {
+                             Text("Nature")
+                                .font(.system(size: 35))
+                                  
+                        }
+                        Image("PLANT")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                        .frame(width: 150, height: 100)
+                        .padding(.bottom, 15)
+                        
+                    }
+                    
                 })
-        
                     .font(.title)
-                    .padding(.top, 30)
-                    .padding(.trailing, 12)
                     .tint(Color("PINK"))
                         .buttonStyle(.borderedProminent)
-                        .multilineTextAlignment(.center)
                         .foregroundColor(Color.black)
                 
                 Button(action: {
                     print("Floating Button Click")
                 }, label: {
-                    NavigationLink(destination: Food()) {
-                         Text("Hobbies")
-                            .font(.system(size: 29))
-                            .padding(.horizontal, 34)
-                            .padding(.bottom, 150)
-                            .padding(.top, 10)
-        
-                     }
+                    VStack{ NavigationLink(destination: Food()) {
+                        Text("Hobby")
+                           .font(.system(size: 32))
+
+       
+                    }
+                   Image("PIANO")
+                       .resizable(resizingMode: .stretch)
+                       .aspectRatio(contentMode: .fit)
+                   .frame(width: 150, height: 100)
+                   .padding(.bottom, 20)}
+                   
                 })
-        
+                    .padding(.leading)
                     .font(.title)
-                    .padding(.top, 30)
                     .tint(Color("PINK"))
                         .buttonStyle(.borderedProminent)
                         .multilineTextAlignment(.center)
@@ -112,6 +124,8 @@ struct ContentView: View {
                         
         
                 }
+            .padding(.top, 20)
+            
 
     }
         .padding(.bottom, 200)
