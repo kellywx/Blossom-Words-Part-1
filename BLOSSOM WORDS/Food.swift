@@ -63,7 +63,7 @@ struct Food: View {
             Button(action: {
                 print("Floating Button Click")
             }, label: {
-                NavigationLink(destination: MakeSentence()) {
+                NavigationLink(destination: CHAT()) {
                      Text("Make a sentence")
                         .font(.system(size: 26))
                         .padding()
