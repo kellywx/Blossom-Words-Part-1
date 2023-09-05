@@ -1,0 +1,1 @@
+This is the first part of the app Blossom Words, including the sign in, choose topic, and flashcard vocab word pages. There were many errors with git due to different versions of Xcode. The complete project is here: https://github.com/boogiegoldy/BLOSSOM-WORDS-FINAL.git
